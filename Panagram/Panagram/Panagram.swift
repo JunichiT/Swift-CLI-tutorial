@@ -47,9 +47,43 @@ class Panagram {
         case .help:
             ConsoleIO.showUsage()
 
-        case .unknown:
-            ConsoleIO.writeMessage("Unknown option", to: .error)
+        case .unknown, .quit:
+            ConsoleIO.writeMessage("Unknown option: \(value)", to: .error)
             ConsoleIO.showUsage()
+        }
+    }
+
+    func interactiveMode() {
+        ConsoleIO.writeMessage("Welcome to Panagram. This program checks if an input string is an anagram ot palindrome.")
+        var sholdQuit = false
+        while !sholdQuit {
+            ConsoleIO.writeMessage("Type 'a' to check for anagrams or 'p' for palindromes, type 'q' to quit.")
+            let (option, value) = ConsoleIO.getOption(ConsoleIO.getInput())
+
+            switch option {
+            case .anagram:
+                ConsoleIO.writeMessage("Type the first string:")
+                let first = ConsoleIO.getInput()
+                ConsoleIO.writeMessage("Type the second string:")
+                let second = ConsoleIO.getInput()
+                if first.isAnagram(of: second) {
+                    ConsoleIO.writeMessage("\(first) is an anagral of \(second)")
+                } else {
+                    ConsoleIO.writeMessage("\(first) is NOT an anagral of \(second)")
+                }
+
+            case .palindrome:
+                ConsoleIO.writeMessage("Type a word or sentence:")
+                let string = ConsoleIO.getInput()
+                let isPalindrome = string.isPalindrome()
+                ConsoleIO.writeMessage("\(string) is \(isPalindrome ? "" : "NOT ")a palindrome")
+
+            case .quit:
+                sholdQuit = true
+
+            default:
+                ConsoleIO.writeMessage("Unknown option \(value)", to: .error)
+            }
         }
     }
 }
