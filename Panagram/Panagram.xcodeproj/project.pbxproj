@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0315AE941EEBDA40006FD266 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315AE931EEBDA40006FD266 /* main.swift */; };
 		0315AE9B1EEBDB85006FD266 /* ConsoleIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315AE9A1EEBDB85006FD266 /* ConsoleIO.swift */; };
+		0315AE9D1EEBDEF2006FD266 /* Panagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315AE9C1EEBDEF2006FD266 /* Panagram.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,7 @@
 		0315AE901EEBDA40006FD266 /* Panagram */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Panagram; sourceTree = BUILT_PRODUCTS_DIR; };
 		0315AE931EEBDA40006FD266 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		0315AE9A1EEBDB85006FD266 /* ConsoleIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleIO.swift; sourceTree = "<group>"; };
+		0315AE9C1EEBDEF2006FD266 /* Panagram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Panagram.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			children = (
 				0315AE931EEBDA40006FD266 /* main.swift */,
 				0315AE9A1EEBDB85006FD266 /* ConsoleIO.swift */,
+				0315AE9C1EEBDEF2006FD266 /* Panagram.swift */,
 			);
 			path = Panagram;
 			sourceTree = "<group>";
@@ -126,6 +129,7 @@
 			files = (
 				0315AE941EEBDA40006FD266 /* main.swift in Sources */,
 				0315AE9B1EEBDB85006FD266 /* ConsoleIO.swift in Sources */,
+				0315AE9D1EEBDEF2006FD266 /* Panagram.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
