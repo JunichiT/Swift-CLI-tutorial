@@ -9,4 +9,8 @@
 import Foundation
 
 let panagram = Panagram()
-panagram.staticMode()
+if CommandLine.argc < 2 {
+    // handle interactive mode
+} else {
+    panagram.staticMode()
+}

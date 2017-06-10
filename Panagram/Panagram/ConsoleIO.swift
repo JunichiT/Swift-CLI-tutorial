@@ -8,6 +8,22 @@
 
 import Foundation
 
+enum OptionType: String {
+    case palindrome = "p"
+    case anagram = "a"
+    case help = "h"
+    case unknown
+
+    init(value: String) {
+        switch value {
+        case "a": self = .anagram
+        case "p": self = .palindrome
+        case "h": self = .help
+        default: self = .unknown
+        }
+    }
+}
+
 class ConsoleIO {
     static func showUsage() {
         let executableName = (CommandLine.arguments[0] as NSString).lastPathComponent
@@ -21,5 +37,9 @@ class ConsoleIO {
         + "`\(executableName) -h` to show usage information\n"
         + "Type `\(executableName)` without an option to enter interactive mode."
         print(instructionString)
+    }
+
+    static func getOption(_ option: String) -> (option: OptionType, value: String) {
+        return (OptionType(value: option), option)
     }
 }
